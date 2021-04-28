@@ -1,0 +1,22 @@
+//
+//  Production.xcconfig
+//  FavQuotes
+//
+//  Created by Anthony Odu on 28/04/2021.
+//
+
+// Configuration settings file format documentation can be found at:
+// https://help.apple.com/xcode/#/dev745c5c974
+
+// Production.xcconfig
+// Server URL
+ROOT_URL = https:/$()/healthruwords.p.rapidapi.com/v1
+
+// Keys
+API_KEY = 92f3bfeee7msh29a02d050b1c212p1523aajsn57225c9bf7ac
+
+// App Settings
+APP_NAME = FavQuotes
+APP_BUNDLE_ID = com.hq.Decagon.FavQuotes
+
+
