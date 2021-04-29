@@ -7,8 +7,14 @@
 
 import Foundation
 
-protocol Response {
-    func result<T>(data:T)
-    func success(success:Bool)
-    func error(error:Error)
+public enum CustomError {
+       case jsonMessage(String)
+       case internetError(String)
+       case serverMessage(String)
+   }
+
+protocol GetData: class {
+    func result<T>(data: T)
+    func loading(loading: Bool)
+    func failed(error: CustomError)
 }

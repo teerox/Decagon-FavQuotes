@@ -13,8 +13,4 @@ class SingleQuoteViewController: UIViewController {
         super.viewDidLoad()
 
     }
-    
-
-  
-
 }

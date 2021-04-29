@@ -8,8 +8,6 @@
 import Foundation
 
 class APIManger {
-
-    
     typealias Parameters = [String: Any]
     enum ApiResult {
         case success(Data)
@@ -40,7 +38,7 @@ class APIManger {
                             completion: @escaping (ApiResult) -> Void) {
         let baseUrl = Environment.rootURL.absoluteString
         let header = [
-            "x-rapidapi-key": "92f3bfeee7msh29a02d050b1c212p1523aajsn57225c9bf7ac",
+            "x-rapidapi-key": Environment.apiKey,
             "x-rapidapi-host": "healthruwords.p.rapidapi.com"
         ]
         var urlRequest = URLRequest(url: URL(string: baseUrl+url)!,
