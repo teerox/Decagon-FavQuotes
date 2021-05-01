@@ -13,5 +13,10 @@ class Repository {
             completion(result as Result<[EachCategory]>)
         }
     }
+    func fetchQuoteByTopic(topic: String, completion: @escaping (_ result: Result<[EachCategory]>) -> Void) {
+        DataSource.getAllQuoteByTopic(topic: topic) {(result) in
+                completion(result as Result<[EachCategory]>)
+        }
+    }
 
 }

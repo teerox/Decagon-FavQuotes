@@ -15,8 +15,9 @@ class HomeViewController: UIViewController {
     var arrayOfCategories = [AllTopics]()
     override func viewDidLoad() {
         super.viewDidLoad()
+        let backBarButtonItem = UIBarButtonItem(title: "Back", style: .plain, target: nil, action: nil)
+               navigationItem.backBarButtonItem = backBarButtonItem
         self.navigationController?.navigationBar.prefersLargeTitles = true
-        self.navigationController?.navigationBar.barTintColor = .red
         viewModel.delegate = self
         loadCategory()
     }
@@ -36,7 +37,9 @@ extension HomeViewController: UICollectionViewDataSource,
     }
     func collectionView(_ collectionView: UICollectionView,
                         cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        if let cell = collectionView.dequeueReusableCell(withReuseIdentifier: CollectionViewCell.reuseIdentifier, for: indexPath)
+        if let cell = collectionView
+            .dequeueReusableCell(withReuseIdentifier: CollectionViewCell.reuseIdentifier,
+                                 for: indexPath)
             as? CollectionViewCell {
             let categoryName = arrayOfCategories[indexPath.row]
             cell.categoryName.text = categoryName.topic
@@ -46,6 +49,14 @@ extension HomeViewController: UICollectionViewDataSource,
         }
     }
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        let nextVc = UIStoryboard.init(name: "Main", bundle: Bundle.main)
+            .instantiateViewController(withIdentifier: "QuoteViewController")
+            as? QuoteViewController
+        if let viewController = nextVc {
+            let value = arrayOfCategories[indexPath.row]
+            viewController.eachCategory = value
+            self.navigationController?.pushViewController(viewController, animated: true)
+        }
     }
 }
 
@@ -57,10 +68,12 @@ extension HomeViewController: GetData {
         })
     }
     func loading(loading: Bool) {
-        if loading {
-            showSpinnerView(child: child)
-        } else {
-            removeSpinnerView(child: child)
+        DispatchQueue.main.async {
+            if loading {
+                self.showSpinnerView(child: self.child)
+            } else {
+                self.removeSpinnerView(child: self.child)
+            }
         }
     }
     func failed(error: CustomError) {

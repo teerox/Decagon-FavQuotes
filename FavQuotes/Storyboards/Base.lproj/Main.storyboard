@@ -126,7 +126,7 @@
                     <connections>
                         <outlet property="collectionView" destination="CfX-62-CP3" id="v8J-Gb-S1B"/>
                         <outlet property="quoteImageView" destination="qSJ-L1-RYn" id="yg2-xs-RDN"/>
-                        <segue destination="yvr-E0-XfM" kind="show" id="Iw9-0J-RXI"/>
+                        <segue destination="yvr-E0-XfM" kind="show" identifier="toAllQuote" id="Iw9-0J-RXI"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -141,11 +141,11 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="l0r-pB-1f3">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="82" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="l0r-pB-1f3">
                                 <rect key="frame" x="0.0" y="44" width="375" height="623"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="82" id="iPG-eh-4yZ">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="TableViewCellReuseIdentifier" rowHeight="82" id="iPG-eh-4yZ" customClass="TableViewCell" customModule="FavQuotes" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="375" height="82"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="iPG-eh-4yZ" id="UNS-NP-oym">
@@ -190,8 +190,17 @@
                                                 <constraint firstItem="Ome-fN-cWu" firstAttribute="leading" secondItem="UNS-NP-oym" secondAttribute="leadingMargin" constant="20" id="xSI-Yd-cDK"/>
                                             </constraints>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="authorLabel" destination="yVU-aM-cKw" id="1Il-77-WuV"/>
+                                            <outlet property="nextButton" destination="Gyl-oB-u8s" id="RRT-Td-gJc"/>
+                                            <outlet property="tiltleLabel" destination="mRt-Zc-95W" id="X5l-qa-wEV"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="yvr-E0-XfM" id="Abu-3g-ssh"/>
+                                    <outlet property="delegate" destination="yvr-E0-XfM" id="7wI-I2-rcB"/>
+                                </connections>
                             </tableView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="NjQ-vM-tfB"/>
@@ -205,7 +214,8 @@
                     </view>
                     <navigationItem key="navigationItem" id="Kip-N4-ZK0"/>
                     <connections>
-                        <segue destination="6rI-yk-hdO" kind="show" id="g39-i0-Lln"/>
+                        <outlet property="tableView" destination="l0r-pB-1f3" id="Wxe-be-xab"/>
+                        <segue destination="6rI-yk-hdO" kind="show" identifier="toSingleQuote" id="g39-i0-Lln"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tNX-ot-gUj" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -215,7 +225,7 @@
         <!--Single Quote View Controller-->
         <scene sceneID="xJn-5Q-eAV">
             <objects>
-                <viewController id="6rI-yk-hdO" customClass="SingleQuoteViewController" customModule="FavQuotes" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="SingleQuoteViewController" id="6rI-yk-hdO" customClass="SingleQuoteViewController" customModule="FavQuotes" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="NiH-qW-Ezz">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -257,6 +267,11 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="XOM-Oq-GAX"/>
+                    <connections>
+                        <outlet property="authorLabel" destination="vd3-8v-NZI" id="h2Q-eG-Yj1"/>
+                        <outlet property="singleQuoteImage" destination="IsP-Fg-LZv" id="zzY-l3-jYx"/>
+                        <outlet property="tyoelabel" destination="PMg-L7-OSG" id="Vfi-Gl-Quu"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="PwL-dP-G3J" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

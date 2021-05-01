@@ -15,6 +15,7 @@
 		2030632726399E1900D1CBB8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2030632526399E1900D1CBB8 /* LaunchScreen.storyboard */; };
 		2030633226399E1B00D1CBB8 /* FavQuotesTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2030633126399E1B00D1CBB8 /* FavQuotesTests.swift */; };
 		2030633D26399E1B00D1CBB8 /* FavQuotesUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2030633C26399E1B00D1CBB8 /* FavQuotesUITests.swift */; };
+		203B5F0B263AAFA30047D7DE /* TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 203B5F0A263AAFA30047D7DE /* TableViewCell.swift */; };
 		20D3B5C92639AFD300537C03 /* EachCategory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20D3B5C82639AFD300537C03 /* EachCategory.swift */; };
 		20D3B5E22639E03B00537C03 /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20D3B5E12639E03B00537C03 /* Utils.swift */; };
 		20D3B5EB2639E2F200537C03 /* swiftlint.yml in Resources */ = {isa = PBXBuildFile; fileRef = 20D3B5EA2639E2F200537C03 /* swiftlint.yml */; };
@@ -31,6 +32,7 @@
 		20D3B6E1263A359D00537C03 /* Repository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20D3B6E0263A359D00537C03 /* Repository.swift */; };
 		20D3B6E9263A512E00537C03 /* Spinner.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20D3B6E8263A512E00537C03 /* Spinner.swift */; };
 		20D3B6EE263A5D8D00537C03 /* CollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20D3B6ED263A5D8D00537C03 /* CollectionViewCell.swift */; };
+		20E28ABD263B000300E1D621 /* HomeViewModelTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20E28ABC263B000300E1D621 /* HomeViewModelTest.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -65,6 +67,7 @@
 		2030633826399E1B00D1CBB8 /* FavQuotesUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FavQuotesUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		2030633C26399E1B00D1CBB8 /* FavQuotesUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavQuotesUITests.swift; sourceTree = "<group>"; };
 		2030633E26399E1B00D1CBB8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		203B5F0A263AAFA30047D7DE /* TableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewCell.swift; sourceTree = "<group>"; };
 		20D3B5C82639AFD300537C03 /* EachCategory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EachCategory.swift; sourceTree = "<group>"; };
 		20D3B5E12639E03B00537C03 /* Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
 		20D3B5EA2639E2F200537C03 /* swiftlint.yml */ = {isa = PBXFileReference; lastKnownFileType = text.yaml; path = swiftlint.yml; sourceTree = "<group>"; };
@@ -84,6 +87,7 @@
 		20D3B6E0263A359D00537C03 /* Repository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Repository.swift; sourceTree = "<group>"; };
 		20D3B6E8263A512E00537C03 /* Spinner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Spinner.swift; sourceTree = "<group>"; };
 		20D3B6ED263A5D8D00537C03 /* CollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewCell.swift; sourceTree = "<group>"; };
+		20E28ABC263B000300E1D621 /* HomeViewModelTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModelTest.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -155,6 +159,7 @@
 			children = (
 				2030633126399E1B00D1CBB8 /* FavQuotesTests.swift */,
 				2030633326399E1B00D1CBB8 /* Info.plist */,
+				20E28ABC263B000300E1D621 /* HomeViewModelTest.swift */,
 			);
 			path = FavQuotesTests;
 			sourceTree = "<group>";
@@ -176,6 +181,7 @@
 				20D3B6CE263A109A00537C03 /* Extenstions.swift */,
 				20D3B6E8263A512E00537C03 /* Spinner.swift */,
 				20D3B6ED263A5D8D00537C03 /* CollectionViewCell.swift */,
+				203B5F0A263AAFA30047D7DE /* TableViewCell.swift */,
 			);
 			path = Helper;
 			sourceTree = "<group>";
@@ -450,6 +456,7 @@
 				20D3B6A2263A0D9D00537C03 /* Response.swift in Sources */,
 				20D3B6EE263A5D8D00537C03 /* CollectionViewCell.swift in Sources */,
 				20D3B6D5263A17C800537C03 /* DataSource.swift in Sources */,
+				203B5F0B263AAFA30047D7DE /* TableViewCell.swift in Sources */,
 				20D3B6CF263A109A00537C03 /* Extenstions.swift in Sources */,
 				20D3B6BF263A0EE200537C03 /* SingleQuoteViewController.swift in Sources */,
 				20D3B6B5263A0EAF00537C03 /* QuotesViewModel.swift in Sources */,
@@ -472,6 +479,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				2030633226399E1B00D1CBB8 /* FavQuotesTests.swift in Sources */,
+				20E28ABD263B000300E1D621 /* HomeViewModelTest.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
